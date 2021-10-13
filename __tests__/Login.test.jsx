@@ -1,6 +1,6 @@
 import Login from "../pages/login";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { RouterContext } from "next/dist/next-server/lib/router-context";
+import { RouterContext } from "next/dist/shared/lib/router-context";
 
 const push = jest.fn().mockResolvedValue(true); // .mockResolvedValue() because push is a promise
 
@@ -22,7 +22,10 @@ export const routerMock = {
     emit: jest.fn(),
   },
   isFallback: false,
-};
+  isLocaleDomain: true,
+  isReady: true,
+  isPreview: false,
+}
 
 test("AAU, when I click on the login Link, I am taken to user/testid", () => {
   render(

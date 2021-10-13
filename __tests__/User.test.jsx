@@ -1,6 +1,6 @@
 import User from "../pages/user/[id]";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { RouterContext } from "next/dist/next-server/lib/router-context";
+import { RouterContext } from "next/dist/shared/lib/router-context";
 
 const id = "testid";
 
@@ -22,7 +22,10 @@ export const routerMock = {
     emit: jest.fn(),
   },
   isFallback: false,
-};
+  isLocaleDomain: true,
+  isReady: true,
+  isPreview: false,
+}
 
 test("AAU, I can see the user id", () => {
   render(
