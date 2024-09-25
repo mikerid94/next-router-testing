@@ -27,7 +27,7 @@ export const routerMock = {
   isPreview: false,
 }
 
-test("AAU, I can see the user id", () => {
+test("how to mock query params for a screen", () => {
   render(
     <RouterContext.Provider value={routerMock}>
       <User />

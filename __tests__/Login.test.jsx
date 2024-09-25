@@ -27,7 +27,7 @@ export const routerMock = {
   isPreview: false,
 }
 
-test.only("AAU, when I click on the login Link, I am taken to user/testid", () => {
+test.only("how to assertion a Link is clicked", () => {
   render(
     <RouterContext.Provider value={routerMock}>
       <Login />
